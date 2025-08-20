@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import AboutPage from "./AboutPage";
 
+//import profilePhoto from "./assets/profile_photo.jpg";
+
 function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -38,11 +40,8 @@ function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <img
-    src="photo\profile_photo.jpg"
-    alt="Shreya R Nayak"
-    className="w-40 h-40 object-cover rounded-full shadow-lg border-4 border-purple-500 ml-6"
-  />
+    
+      <img src="/profile_photo.jpg" alt="Shreya R Nayak" className="w-40 h-40 object-cover rounded-full shadow-lg border-4 border-purple-500 ml-6" />
       <header className="flex flex-col items-center justify-center text-center py-1 px-6">
         
         <h2 className="text-5xl font-extrabold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
