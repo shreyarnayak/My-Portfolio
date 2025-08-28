@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import AboutPage from "./AboutPage";
 
+import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
+
 //import profilePhoto from "./assets/profile_photo.jpg";
 
 function HomePage() {
@@ -39,22 +42,90 @@ function HomePage() {
         )}
       </nav>
 
-      {/* Hero Section */}
-    
-      <img src="/profile_photo.jpg" alt="Shreya R Nayak" className="w-40 h-40 object-cover rounded-full shadow-lg border-4 border-purple-500 ml-6" />
-      <header className="flex flex-col items-center justify-center text-center py-1 px-6">
-        
-        <h2 className="text-5xl font-extrabold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
-          Hi, I’m Shreya R Nayak👋
-        </h2>
-        <p className="mt-4 text-lg text-gray-300 max-w-xl">
-          Crafting elegant solutions with code. Passionate about building impactful web apps and solving complex problems.
-        </p>
-        <a href="#projects" className="mt-8 px-6 py-3 bg-purple-500 hover:bg-purple-600 rounded-full shadow-lg transition">
-          View My Work
+{/* Hero Section */}
+<header className="flex flex-col md:flex-row items-center justify-center text-center md:text-left py-16 px-8 max-w-6xl mx-auto">
+
+  {/* Left Side - Photo */}
+  <motion.div
+    initial={{ opacity: 0, x: -100 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 1 }}
+    className="flex-shrink-0 mb-8 md:mb-0 md:mr-12"
+  >
+    <img
+      src="/profile_photo.jpg"
+      alt="Shreya R Nayak"
+      className="w-56 h-56 object-cover rounded-full shadow-2xl border-4 border-purple-500 hover:scale-105 transition"
+    />
+  </motion.div>
+
+  {/* Right Side - Text */}
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.5, duration: 1 }}
+  >
+    <h2 className="text-4xl md:text-5xl font-extrabold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+      Hi, I’m Shreya R Nayak 👋
+    </h2>
+
+    {/* Typewriter */}
+    <h3 className="text-xl mt-3 text-gray-300">
+      <Typewriter
+        words={[
+          "Full-Stack Developer 💻",
+          "AI Enthusiast 🤖",
+          "Problem Solver 🔥",
+        ]}
+        loop={true}
+        cursor
+        cursorStyle="|"
+        typeSpeed={70}
+        deleteSpeed={50}
+        delaySpeed={1500}
+      />
+    </h3>
+
+    {/* Buttons */}
+    <motion.div
+      className="mt-8 flex flex-col sm:flex-row gap-4"
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 1, duration: 0.5 }}
+    >
+      <a
+        href="#projects"
+        className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-full shadow-lg transition"
+      >
+        View My Work
+      </a>
+
+      {/* Resume buttons combined */}
+      <div className="inline-flex rounded-full shadow-lg overflow-hidden transform transition hover:scale-105 hover:shadow-pink-500/50">
+        {/* View Online */}
+        <a
+          href="https://drive.google.com/file/d/1XxS2wQjZ4z1duKUYDy6f26LyxrgyjFRU/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 transition text-white font-semibold"
+        >
+          📄 Resume
         </a>
-       
-      </header>
+
+        {/* Download */}
+        <a
+          href="/resume.pdf"
+          download="Shreya_R_Nayak_Resume.pdf"
+          className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition border-l border-white/20 text-white"
+        >
+          ⬇️
+        </a>
+      </div>
+    </motion.div>
+  </motion.div>
+</header>
+
+
 
       {/* About Section */}
       <section id="about" className="px-10 py-1 max-w-4xl mx-auto">
@@ -65,15 +136,29 @@ function HomePage() {
           strong foundation in web development and machine learning. Eager to contribute technical skills and creativity to
           innovative teams and grow through continuous learning.
         </p>
-        <br />
-        <a
-          href="https://drive.google.com/file/d/1XxS2wQjZ4z1duKUYDy6f26LyxrgyjFRU/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-3 bg-pink-500 hover:bg-pink-600 rounded-full shadow-lg transition"
-        >
-          View Resume
-        </a>
+          {/* Social Buttons */}
+  <div className="mt-8 flex justify-center gap-6">
+    {/* GitHub */}
+    <a
+      href="https://github.com/shreyarnayak"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-purple-600 text-white shadow-md hover:scale-110 transition"
+    >
+      <i className="fab fa-github text-xl"></i>
+    </a>
+
+    {/* LinkedIn */}
+    <a
+      href="https://www.linkedin.com/in/shreyarnayak14"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-pink-500 text-white shadow-md hover:scale-110 transition"
+    >
+      <i className="fab fa-linkedin-in text-xl"></i>
+    </a>
+  </div>
+  <br/>
       </section>
 
       {/* Projects Section */}
