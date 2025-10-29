@@ -172,7 +172,7 @@ function HomePage() {
     <div className="bg-gray-900 rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] transition border border-gray-700">
       {/* Image */}
       <img
-        src="/photos/Project1.png"
+        src="/Project1.png"
         alt="Safe Span"
         className="w-full h-48 object-cover"
       />
@@ -217,7 +217,7 @@ function HomePage() {
     {/* Project 2 */}
     <div className="bg-gray-900 rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] transition border border-gray-700">
       <img
-        src="/photos/project2.png"
+        src="/project2.png"
         alt="Text to Speech App"
         className="w-full h-48 object-cover"
       />
