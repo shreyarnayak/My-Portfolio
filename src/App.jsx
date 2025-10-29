@@ -162,24 +162,188 @@ function HomePage() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="px-8 py-16 bg-purple-950/40">
-        <h3 className="text-3xl font-bold mb-10 text-purple-300 text-center">Featured Projects</h3>
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div className="bg-gray-800 rounded-xl p-6 shadow-lg hover:scale-[1.02] transition">
-            <h4 className="text-xl font-semibold mb-2 text-purple-200">CNN-based Crack Detection</h4>
-            <p className="text-gray-400 mb-4">An AI-powered tool for detecting structural cracks in real-time using convolutional neural networks.</p>
-            <a href="#" className="text-purple-400 hover:underline">View Project →</a>
-          </div>
-          <div className="bg-gray-800 rounded-xl p-6 shadow-lg hover:scale-[1.02] transition">
-            <h4 className="text-xl font-semibold mb-2 text-purple-200">Medisync</h4>
-            <p className="text-gray-400 mb-4">
-              Implemented modules for uploading, managing, and sharing medical records with doctors in real-time.
-              • Built a smart reminder system for medications and checkups with Firebase-powered notifications.
-            </p>
-            <a href="#" className="text-purple-400 hover:underline">View Project →</a>
-          </div>
+<section id="projects" className="px-8 py-16 bg-purple-950/40">
+  <h3 className="text-3xl font-bold mb-10 text-purple-300 text-center">
+    Featured Projects
+  </h3>
+
+  <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+    {/* Project 1 */}
+    <div className="bg-gray-900 rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] transition border border-gray-700">
+      {/* Image */}
+      <img
+        src="/photos/Project1.png"
+        alt="Safe Span"
+        className="w-full h-48 object-cover"
+      />
+      <div className="p-6">
+        <h4 className="text-xl font-semibold mb-2 text-purple-200">Safe Span</h4>
+        <p className="text-gray-400 mb-4">
+          A AI-Powered Crack Detection System using CNNs to automatically identify and classify structural from videos with high accuracy based on depth. Supports real-time monitoring, reducing manual inspection costs and improving infrastructure safety.
+        </p>
+
+        {/* Tech stack */}
+        <div className="flex flex-wrap gap-2 mb-4">
+          {["Python", "Machine Learning", "TensorFlow / Keras","CNN", "OpenCV", "Streamlit"].map((tech) => (
+            <span
+              key={tech}
+              className="px-3 py-1 bg-gray-800 text-purple-300 text-sm rounded-full"
+            >
+              {tech}
+            </span>
+          ))}
         </div>
-      </section>
+
+        {/* Buttons */}
+        <div className="flex gap-4">
+          <a
+            href="https://github.com/shreyarnayak/AI_Powered-Crack-Detection-System"
+            className="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition"
+          >
+            <span>💻</span> Code
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-pink-600 hover:to-purple-600 transition"
+          >
+            🚀 Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {/* Project 2 */}
+    <div className="bg-gray-900 rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] transition border border-gray-700">
+      <img
+        src="/photos/project2.png"
+        alt="Text to Speech App"
+        className="w-full h-48 object-cover"
+      />
+      <div className="p-6">
+        <h4 className="text-xl font-semibold mb-2 text-purple-200">Text to Speech App</h4>
+        <p className="text-gray-400 mb-4">
+           Android Text-to-Speech (TTS) application that converts text (typed by the user or extracted from PDF files) into natural-sounding speech. It also supports translation into multiple languages before playback, making it useful for accessibility, learning, and productivity.
+        </p>
+
+        <div className="flex flex-wrap gap-2 mb-4">
+          {["Java", "Android TextToSpeech API", "LibreTranslate API", "React.PDFBox-Android ", "Node.Gradle"].map((tech) => (
+            <span
+              key={tech}
+              className="px-3 py-1 bg-gray-800 text-purple-300 text-sm rounded-full"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex gap-4">
+          <a
+            href="https://github.com/shreyarnayak/TextToSpeech_AndroidFramework"
+            className="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition"
+          >
+            <span>💻</span> Code
+          </a>
+         <a
+  href="https://drive.google.com/uc?export=download&id=1ZoQPqt6YW_6AYPho0mBtRGtuVPhjYc9N"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-pink-600 hover:to-purple-600 transition"
+>
+  🚀 Download APK
+</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {/* View More Projects */}
+<div className="flex justify-center mt-10">
+  <a
+    href="https://github.com/shreyarnayak" // 🔗 your GitHub profile link here
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 px-6 py-3 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 transition"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      className="w-5 h-5"
+    >
+      <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.41 7.86 10.95.58.1.79-.25.79-.56v-2.02c-3.2.7-3.87-1.39-3.87-1.39-.53-1.34-1.29-1.7-1.29-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.72 1.27 3.38.97.1-.76.41-1.27.74-1.56-2.55-.29-5.24-1.27-5.24-5.67 0-1.25.45-2.27 1.19-3.07-.12-.29-.52-1.45.11-3.02 0 0 .97-.31 3.19 1.18a11.1 11.1 0 0 1 5.8 0c2.22-1.49 3.19-1.18 3.19-1.18.63 1.57.23 2.73.11 3.02.74.8 1.19 1.82 1.19 3.07 0 4.41-2.69 5.38-5.25 5.66.42.37.79 1.1.79 2.22v3.29c0 .31.21.66.8.55A10.99 10.99 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" />
+    </svg>
+    View More Projects
+  </a>
+</div>
+
+</section>
+
+{/* Experience Section */}
+<section id="experience" className="px-8 py-16 max-w-5xl mx-auto relative">
+  <h3 className="text-3xl font-bold mb-10 text-center text-white bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-500">
+    💼 Experience
+  </h3>
+
+  <div className="relative border-l-4 border-purple-500/40 pl-6 space-y-12">
+    {/* Sasken Internship */}
+    <div className="relative bg-gradient-to-r from-gray-800 via-purple-900/40 to-gray-800 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition">
+      <span className="absolute -left-3 top-6 w-6 h-6 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full border-4 border-gray-900"></span>
+      <h4 className="text-xl font-semibold text-purple-200 flex items-center gap-2">
+        🚀 Intern - Sasken Technologies
+      </h4>
+      <p className="text-gray-400 text-sm mb-2">Virtual Internship | June 2025 – August 2025</p>
+      <p className="text-gray-300 leading-relaxed">
+        Worked on <span className="text-pink-400 font-semibold">Android Studio</span> using 
+        the <span className="text-purple-400 font-semibold">Java framework</span>. 
+        Contributed to developing mobile application features, debugging modules, 
+        and collaborating with mentors in a remote environment.
+      </p>
+    </div>
+  </div>
+</section>
+
+{/* Education Section */}
+<section id="education" className="px-8 py-16 max-w-5xl mx-auto relative bg-gradient-to-br from-gray-900 via-purple-950 to-black">
+  <h3 className="text-3xl font-bold mb-10 text-center bg-clip-text text-transparent text-white">
+    🎓 Education
+  </h3>
+
+  <div className="relative border-l-4 border-pink-500/40 pl-6 space-y-12">
+    {/* College */}
+    <div className="relative bg-gradient-to-r from-gray-800 via-pink-900/40 to-gray-800 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition">
+      <span className="absolute -left-3 top-6 w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full border-4 border-gray-900"></span>
+      <h4 className="text-xl font-semibold text-purple-200">
+        Bachelor of Engineering in Computer Science
+      </h4>
+      <p className="text-gray-400 text-sm mb-2">📍 Canara Engineering College | 2022 – 2026</p>
+      <p className="text-gray-300 leading-relaxed">
+        Coursework: <span className="text-pink-400">Data Structures</span>, 
+        <span className="text-purple-400"> Web Development</span>, 
+        <span className="text-pink-400"> Cloud Computing</span>, 
+        <span className="text-purple-400"> AI</span>, 
+        <span className="text-pink-400"> Blockchain</span>.  
+        Actively involved in hackathons and technical clubs.
+      </p>
+    </div>
+
+    {/* PU */}
+    <div className="relative bg-gradient-to-r from-gray-800 via-purple-900/40 to-gray-800 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition">
+      <span className="absolute -left-3 top-6 w-6 h-6 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full border-4 border-gray-900"></span>
+      <h4 className="text-xl font-semibold text-purple-200">Pre-university PCMB (97%)</h4>
+      <p className="text-gray-400 text-sm">📍 H.H.S.I.B.S.S Edneer | 2020 – 2022</p>
+    </div>
+
+    {/* SSLC */}
+    <div className="relative bg-gradient-to-r from-gray-800 via-pink-900/40 to-gray-800 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition">
+      <span className="absolute -left-3 top-6 w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full border-4 border-gray-900"></span>
+      <h4 className="text-xl font-semibold text-purple-200">SSLC (92%)</h4>
+      <p className="text-gray-400 text-sm">📍 M.S.C.H.S.S Peradala, Neerchal | 2019 – 2020</p>
+    </div>
+  </div>
+</section>
+
 
       {/* Contact Section */}
       <section id="contact" className="px-8 py-16 max-w-4xl mx-auto text-center">
@@ -188,7 +352,7 @@ function HomePage() {
         <div className="flex flex-col gap-4 items-center">
           <a href="https://www.linkedin.com/in/shreyarnayak14" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:underline">LinkedIn</a>
           <a href="mailto:shreyarnayak14@gmail.com" className="text-purple-400 hover:underline">shreyarnayak14@gmail.com</a>
-          <p className="text-gray-400">📞 +91-9876543210</p>
+          <p className="text-gray-400">📞 +91-8075800020</p>
         </div>
       </section>
 
